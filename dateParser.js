@@ -29,7 +29,7 @@ function parseDate (date) {
 		if (d == "Invalid Date")
 			return {unix: null, natural: null};
 		var month = months[d.getMonth()+1];
-		return {unix: d.getTime(), natural: month + " " + d.getDate() + "," + d.getFullYear()}
+		return {unix: (d.getTime()/1000), natural: month + " " + d.getDate() + "," + d.getFullYear()}
 	}
 
 }
