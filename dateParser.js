@@ -16,8 +16,7 @@ var months = {
 function unixTimeStamp (timeStamp) {
 	var d = new Date(timeStamp*1000);
 	var month = months[d.getMonth()+1];
-	return {unix: timeStamp,
-natural: month + " " + d.getDate() + ", " + d.getFullYear()};
+	return JSON.stringify({unix: timeStamp, natural: month + " " + d.getDate() + ", " + d.getFullYear()});
 }
 
 function parseDate (date) {
@@ -29,7 +28,7 @@ function parseDate (date) {
 		if (d == "Invalid Date")
 			return {unix: null, natural: null};
 		var month = months[d.getMonth()+1];
-		return {unix: (d.getTime()/1000), natural: month + " " + d.getDate() + "," + d.getFullYear()}
+		return JSON.stringify({unix: (d.getTime()/1000), natural: month + " " + d.getDate() + "," + d.getFullYear()});
 	}
 
 }
