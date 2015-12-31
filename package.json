@@ -1,0 +1,14 @@
+{
+  "name": "time-stamp-ms",
+  "version": "1.0.0",
+  "description": "Converts unix time to readable date-time format and vice versa",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lukaskwkw",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
